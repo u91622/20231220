@@ -17,3 +17,7 @@ colnames(Data)    # 列出所有的欄位名稱
 colnames(Data)[3] # 列出第一個欄位名稱
 Result1 = lm(Data[,"Weight"]~Data[,"Height"])
 summary(Result1)
+Result1 = cor.test(Data[,"Weight"], Data[,"Height"], method = "pearson") # Pearson correlation
+Result1
+Result2 = cor.test(Data[,"Weight"], Data[,"Height"], method = "spearman") # Spearman correlation
+Result2
